@@ -22,6 +22,6 @@ class RepairsModel extends Model
     protected $_auto = array(
         array('create_time', NOW_TIME, self::MODEL_INSERT),
         array('update_time', NOW_TIME, self::MODEL_BOTH),
-        array('status', '1', self::MODEL_INSERT),
+        array('status', '3', self::MODEL_INSERT),
     );
 }

@@ -68,7 +68,7 @@ class RepairsController extends AdminController
      * 编辑频道
      * @author 麦当苗儿 <zuojiazi@vip.qq.com>
      */
-    public function edit($id = 0){
+    public function content($id = 0){
         if(IS_POST){
             $Repairs = D('Repairs');
             $data = $Repairs->create();

@@ -101,7 +101,6 @@
 					<th class="row-selected">
 						<input class="checkbox check-all" type="checkbox">
 					</th>
-					<th>id</th>
 					<th>报修单号</th>
 					<th>报修人</th>
 					<th>电话</th>
@@ -115,16 +114,15 @@
 			<tbody>
 				<?php if(!empty($list)): if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$repairs): $mod = ($i % 2 );++$i;?><tr>
 						<td><input class="checkbox check-all" type="checkbox"></td>
-						<td><?php echo ($repairs["id"]); ?></td>
 						<td><?php echo ($repairs["serial_number"]); ?></td>
 						<td><?php echo ($repairs["name"]); ?></td>
                         <td><?php echo ($repairs["tel"]); ?></td>
 						<td><?php echo ($repairs["address"]); ?></td>
 						<td><?php echo ($repairs["problem"]); ?></td>
 						<td><?php echo (time_format($repairs["create_time"])); ?></td>
-						<td><?php echo ($repairs["status"]); ?></td>
+						<td><?php echo (get_status_title($repairs["status"])); ?></td>
 						<td>
-							<a title="查看详情" href="<?php echo U('edit?id='.$repairs['id'].'&pid='.$pid);?>">查看详情</a>
+							<a title="查看详情" href="<?php echo U('content?id='.$repairs['id'].'&pid='.$pid);?>">查看详情</a>
 							<a class="confirm ajax-get" title="删除" href="<?php echo U('del?id='.$repairs['id']);?>">删除</a>
 							<!--<a title="修改" href="<?php echo U('edit?id='.$repairs['id']);?>">修改</a>-->
 						</td>

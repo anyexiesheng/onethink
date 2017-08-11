@@ -151,6 +151,9 @@ function get_status_title($status = null){
         case 0  : return    '禁用';     break;
         case 1  : return    '正常';     break;
         case 2  : return    '待审核';   break;
+        case 3  : return    '待处理';   break;
+        case 4  : return    '处理中';   break;
+        case 5  : return    '处理完成'; break;
         default : return    false;      break;
     }
 }
